@@ -1,10 +1,10 @@
-def max_in_array(arr): 
-    max_ = arr[0]
+def min_in_array(arr): 
+    min_ = arr[0]
     for ele in arr:
-        if ele > max_:
-           max_ = ele
-    return max_ 
+        if ele < min_:
+           min_ = ele
+    return min_ 
 
 n=int(input())
 arr_=[int(input()) for i in range(n)]
-print(max_in_array(arr_))
+print(min_in_array(arr_))
