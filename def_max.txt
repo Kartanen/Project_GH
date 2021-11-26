@@ -1,13 +1,10 @@
-def max(arg1, *args, key=lambda x: x): # arg1 — first in list, args — rest in list
+def max_in_array(arr): 
+    max_ = arr[0]
+    for ele in arr:
+        if ele > max_:
+           max_ = ele
+    return max_ 
 
-    if args: # unite in list arg1 + args
-        iterable = [arg1] + list(args)
-    else: #if 1 elem given
-        iterable = arg1
-    
-    result = iterable[0] #arg1==max
- 
-    for item in iterable[1:]: #compare max to rest of list
-        if key(item) > key(result):
-            result = item
-    return result
+n=int(input())
+arr_=[int(input()) for i in range(n)]
+print(max_in_array(arr_))
